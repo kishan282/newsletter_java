@@ -1,0 +1,24 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultzone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+server:
+  port: 8000
+spring:
+  application:
+    name: NEWSLETTER-DBH2
+  datasource:
+    password: password
+    url: jdbc:h2:mem:testdb
+    username: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  sql:
+    init:
+      mode: always
